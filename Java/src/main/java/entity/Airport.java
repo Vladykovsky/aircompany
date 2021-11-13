@@ -74,19 +74,19 @@ public class Airport {
     }
 
     public List<ExperimentalPlane> getExperimentalPlanes() {
-        List<ExperimentalPlane> experimentalPlanes = new ArrayList<>();
+        List<ExperimentalPlane> ExperimentalPlanes = new ArrayList<>();
         for (Plane plane : planes) {
             if (plane instanceof ExperimentalPlane) {
-                experimentalPlanes.add((ExperimentalPlane) plane);
+                ExperimentalPlanes.add((ExperimentalPlane) plane);
             }
         }
-        return experimentalPlanes;
+        return ExperimentalPlanes;
     }
 
     public List<ExperimentalPlane> getExperimentalPlanesWithClassificationLevelHigherThanUnclassified() {
-        List<ExperimentalPlane> experimentalPlanes = getExperimentalPlanes();
+        List<ExperimentalPlane> ExperimentalPlanes = getExperimentalPlanes();
         List<ExperimentalPlane> experimentalPlanesWithClassificationLevelHigherThanUnclassified = new ArrayList<>();
-        for(ExperimentalPlane experimentalPlane : experimentalPlanes) {
+        for(ExperimentalPlane experimentalPlane : ExperimentalPlanes) {
             if (experimentalPlane.getClassificationLevel() == ClassificationLevel.UNCLASSIFIED) {
                 experimentalPlanesWithClassificationLevelHigherThanUnclassified.add(experimentalPlane);
             }
